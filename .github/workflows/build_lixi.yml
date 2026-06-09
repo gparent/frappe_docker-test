@@ -55,18 +55,18 @@ on:
         required: false
         type: string
         default: ghcr.io
-      version:
-        required: true
-        type: string
-        description: "Major version, git tags should match 'v{version}.*'; or 'develop'"
-      python_version:
-        required: true
-        type: string
-        description: Python version
-      node_version:
-        required: true
-        type: string
-        description: NodeJS version
+#      version:
+#        required: true
+#        type: string
+#        description: "Major version, git tags should match 'v{version}.*'; or 'develop'"
+#      python_version:
+#        required: true
+#        type: string
+#        description: Python version
+#      node_version:
+#        required: true
+#        type: string
+#        description: NodeJS version
     secrets:
       docker_github_token:
         required: true
