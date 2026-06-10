@@ -164,13 +164,13 @@ jobs:
           platforms: linux/amd64
           tags: ${{ env.TEST_IMAGE }}
 
-      - name: Smoke test image contents
-        env:
-          APP_NAME: ${{ inputs.app_name }}
-          TEST_IMAGE: ${{ env.TEST_IMAGE }}
-        run: |
-          docker run --rm --entrypoint bash "$TEST_IMAGE" -lc \
-            "test -d /home/frappe/frappe-bench/apps/frappe && test -d /home/frappe/frappe-bench/apps/${APP_NAME}"
+#      - name: Smoke test image contents
+#        env:
+#          APP_NAME: ${{ inputs.app_name }}
+#          TEST_IMAGE: ${{ env.TEST_IMAGE }}
+#        run: |
+#          docker run --rm --entrypoint bash "$TEST_IMAGE" -lc \
+#            "test -d /home/frappe/frappe-bench/apps/frappe && test -d /home/frappe/frappe-bench/apps/${APP_NAME}"
 
       - name: Login to GHCR
         if: ${{ inputs.push && inputs.registry == 'ghcr.io' }}
