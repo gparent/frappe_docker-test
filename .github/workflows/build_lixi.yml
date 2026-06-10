@@ -107,6 +107,7 @@ jobs:
       - name: Create apps.json
         env:
           GITHUB_TOKEN: ${{ secrets.DOCKER_GITHUB_TOKEN }}
+          APP_REPO: ${{ inputs.app_repo }}
           APP_REF: ${{ inputs.app_ref }}
           APPS_JSON_PATH: ${{ env.APPS_JSON_PATH }}
         run: |
