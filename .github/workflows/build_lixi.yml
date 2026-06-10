@@ -133,8 +133,8 @@ jobs:
           contents += {"url": "https://github.com/frappe/erpnext.git", "branch": "version-15"}
           contents += {"url": "https://github.com/frappe/hrms.git", "branch": "version-15"}
           contents += {"url": repo, "branch": ref}
-          contents += {"url": f"https://${token}@github.com/lixi-ca/lixi_theme.git", "branch": "v0.0.3"}
-          contents += {"url": f"https://${token}@github.com/lixi-ca/lixi_convert.git", "branch": "develop"}
+          contents += {"url": f"https://${token}@github.com/gparent/lixi_theme.git", "branch": "v0.0.3"}
+          contents += {"url": f"https://${token}@github.com/gparent/lixi_convert.git", "branch": "develop"}
 
           Path(os.environ["APPS_JSON_PATH"]).write_text(
               json.dumps(contents, indent=2) + "\n",
