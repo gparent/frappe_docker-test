@@ -67,9 +67,9 @@ on:
 #        required: true
 #        type: string
 #        description: NodeJS version
-    secrets:
-      docker_github_token:
-        required: true
+#    secrets:
+#      docker_github_token:
+#        required: true
 
 permissions:
   contents: read
@@ -106,7 +106,7 @@ jobs:
 
       - name: Create apps.json
         env:
-          GITHUB_TOKEN: ${{ secrets.docker_github_token }}
+          GITHUB_TOKEN: ${{ secrets.DOCKER_GITHUB_TOKEN }}
           APP_REF: ${{ inputs.app_ref }}
           APPS_JSON_PATH: ${{ env.APPS_JSON_PATH }}
         run: |
