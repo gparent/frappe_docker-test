@@ -145,7 +145,7 @@ jobs:
 
       - name:
         run: |
-          echo "APPS_JSON_BASE64=$(base64 -d $APPS_JSON_PATH)" >> $GITHUB_OUTPUT
+          echo "APPS_JSON_BASE64=$(base64 -w 0 $APPS_JSON_PATH)" >> $GITHUB_OUTPUT
         id: apps_json
 
       - name: Build app image
